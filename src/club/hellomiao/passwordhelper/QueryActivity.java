@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import database.DatabaseHelper;
+import logic.DESUtil;
 
 public class QueryActivity extends Activity {
 	
@@ -123,6 +124,11 @@ public class QueryActivity extends Activity {
 									}
 								}
 								cursor.close();
+
+								byte[] bkeydata = {1,2,3,4,5,6,7,8};		
+								byte[] tmp = DESUtil.parseHexStr2Byte(mpassword);
+								tmp = DESUtil.desDecrypt(tmp, bkeydata);
+								mpassword = new String(tmp);
 								
 								Message m = Message.obtain();
 								m.what = LOGININFO;
@@ -132,14 +138,6 @@ public class QueryActivity extends Activity {
 								m.setData(b);
 								mhandler.sendMessage(m);   
 								
-								
-//								Toast.makeText(mcontext, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½"+ maccount +"   ï¿½ï¿½ï¿½ë£º" + mpassword, Toast.LENGTH_LONG).show();
-								
-//								AlertDialog.Builder ad  = new Builder(mcontext);
-//								ad.setTitle(mname+"ï¿½Äµï¿½Â½ï¿½ï¿½Ï¢ï¿½ï¿½" ) ;
-//								ad.setMessage("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½" + maccount + "/r/n" + "ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½" + mpassword  ) ;
-//								ad.setPositiveButton("È·ï¿½ï¿½" ,  null );
-//								ad.show(); 	
 							} else {
 								Message m = Message.obtain();
 								m.what = QUERYFAIL;
@@ -195,8 +193,5 @@ public class QueryActivity extends Activity {
 		textView_query_account.setText(SACCOUNT);
 		textView_query_password.setText(SPASSWORD);
 	}
-	
-	
-	
 	
 }
