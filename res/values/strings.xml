@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PasswordHelper</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_slogan">欢迎使用密码助手V0.1</string>
+    <string name="enterpsw">请输入密码</string>
+    <string name="enterpsw2">请再输入一次密码</string>
+    <string name="copyright">HelloMiao.club © 2019 all rights reserved</string>
+    <string name="confirmpsw">确认密码</string>
+    <string name="menu_title">功能选择</string>
+    <string name="menu_query">查询密码</string>
+    <string name="menu_manage">新增密码</string>
+    <string name="menu_setting">设置</string>
+    <string name="title_activity_query">QueryActivity</string>
+    <string name="title_activity_add">添加一条新纪录</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="welcome_slogen">欢迎使用密码助手V0.1</string>
+    <string name="setting_reset">重置密码</string>
+    <string name="setting_maxtime">最大允许密码错误次数</string>
+    <string name="confirm">确认</string>
+
+</resources>

@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView_setting2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_setting" />
+
+    <Switch
+        android:id="@+id/switch_setting_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView_setting2"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="40dp"
+        android:checked="false"
+        android:text="@string/setting_reset"
+        android:textOff="不重置"
+        android:textOn="重置" />
+
+    <TextView
+        android:id="@+id/textView_setting1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/switch_setting_reset"
+        android:layout_below="@+id/switch_setting_reset"
+        android:layout_marginTop="41dp"
+        android:text="@string/setting_maxtime" />
+
+    <EditText
+        android:id="@+id/editText_setting_maxwrongtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_setting1"
+        android:layout_alignBottom="@+id/textView_setting1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/textView_setting1"
+        android:ems="2"
+        android:inputType="number"
+        android:text="5" />
+
+    <Button
+        android:id="@+id/button_settin_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:text="@string/confirm" />
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_query" />
+
+    <EditText
+        android:id="@+id/editText_query_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup_query"
+        android:layout_centerHorizontal="true"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button_query_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_query_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:text="查询" />
+
+    <TextView
+        android:id="@+id/textView_query_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_query_account"
+        android:layout_below="@+id/button_query_query"
+        android:layout_marginTop="59dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView_query_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_query_name"
+        android:layout_below="@+id/textView_query_name"
+        android:layout_marginTop="30dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView_query_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_query_account"
+        android:layout_below="@+id/textView_query_account"
+        android:layout_marginTop="30dp"
+        android:text="TextView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" >
+
+        <RadioButton
+            android:id="@+id/radio_query_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按用户名查询" />
+
+        <RadioButton
+            android:id="@+id/radio_query_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="按应用名称查询" />
+
+    </RadioGroup>
+
+</RelativeLayout>
